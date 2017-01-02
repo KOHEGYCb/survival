@@ -28,9 +28,7 @@ public class Main {
             }
             switch (k){
                 case 1:
-                    beans.AbstractObject tomato = new Tomato();
-                    tomato.printName();
-                    tomato.printDescription();
+
             }
         }
     }
