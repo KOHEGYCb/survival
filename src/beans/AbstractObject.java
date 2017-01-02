@@ -10,13 +10,13 @@ public abstract class AbstractObject {
 
     private int id;
     private int weight;
-    private int size;
+    private int volume;
     private String name;
     private String description;
     private ObjectType type;
 
-    public AbstractObject(int size, int weigth) {
-        this.size = size;
+    public AbstractObject(int volume, int weigth) {
+        this.volume = volume;
         this.weight = weigth;
     }
 
@@ -49,17 +49,17 @@ public abstract class AbstractObject {
     }
 
     /**
-     * @return the size
+     * @return the volume
      */
-    public int getSize() {
-        return size;
+    public int getVolume() {
+        return volume;
     }
 
     /**
-     * @param size the size to set
+     * @param volume the volume to set
      */
-    public void setSize(int size) {
-        this.size = size;
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 
     /**

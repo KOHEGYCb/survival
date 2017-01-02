@@ -9,7 +9,7 @@ public abstract class AbstractInventory {
     public AbstractInventory() {
     }
 
-    public abstract int getFreeSize();
+    public abstract int getFreeVolume();
 
     public abstract int getFreeWeight();
 
