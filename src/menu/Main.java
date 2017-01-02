@@ -38,6 +38,7 @@ public class Main {
                     break;
                 case 3:
                     System.out.println(a.getInventoryStatus());
+                    System.out.println(a.getInventoryObjects());
                     break;
             }
         }

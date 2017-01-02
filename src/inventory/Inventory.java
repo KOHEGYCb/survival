@@ -11,7 +11,7 @@ import java.util.List;
 public class Inventory extends AbstractInventory {
 
     private int weight;
-    private int size;
+    private int volume;
 
     private List<AbstractObject> objects;
 
@@ -19,14 +19,17 @@ public class Inventory extends AbstractInventory {
         this.objects = new ArrayList<AbstractObject>();
     }
 
-    public Inventory(int weight, int size) {
+    public Inventory(int weight, int volume) {
         this.objects = new ArrayList<AbstractObject>();
         this.weight = weight;
-        this.size = size;
+        this.volume = volume;
     }
 
     public void addObject(AbstractObject object) {
-        this.objects.add(object);
+        if (getFreeVolume() >= object.getVolume() & getFreeWeight() >= object.getWeight()) {
+            this.objects.add(object);
+        }else
+            System.out.println("Not enough Volume or Weight");
     }
 
     /**
@@ -44,26 +47,26 @@ public class Inventory extends AbstractInventory {
     }
 
     /**
-     * @return the size
+     * @return the volume
      */
-    public int getSize() {
-        return size;
+    public int getVolume() {
+        return volume;
     }
 
     /**
-     * @param size the size to set
+     * @param volume the volume to set
      */
-    public void setSize(int size) {
-        this.size = size;
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 
     @Override
-    public int getFreeSize() {
-        int usedSize = 0;
+    public int getFreeVolume() {
+        int usedVolume = 0;
         for (int i = 0; i < objects.size(); i++) {
-            usedSize = usedSize + objects.get(i).getSize();
+            usedVolume = usedVolume + objects.get(i).getVolume();
         }
-        return this.size - usedSize;
+        return this.volume - usedVolume;
     }
 
     @Override
@@ -72,15 +75,26 @@ public class Inventory extends AbstractInventory {
         for (int i = 0; i < objects.size(); i++) {
             usedWeight = usedWeight + objects.get(i).getWeight();
         }
-        return this.size - usedWeight;
+        return this.volume - usedWeight;
     }
 
     @Override
     public String getInventoryStatus() {
-        return "FreeSize: " + getFreeSize() 
+        return "FreeVolume: " + getFreeVolume()
                 + "\nFreeWeigth: " + getFreeWeight();
     }
-
+    
+    public String getInventoryObjects() {
+        String str = "Inventory {\n";
+        
+        for(int i = 0; i < objects.size(); i++){
+            str = str + "  " + (i+1) + ") " + objects.get(i).getName() + "\n";
+        }
+        str = str + "}";
+        return str;
+        
+    }
+    
     /**
      * @return the objects
      */
