@@ -6,7 +6,12 @@ package constants;
  */
 public enum ObjectType {
 
-    TOMATO(1);
+    TOMATO(1),
+    CABBAGE(2),
+    CARROT(3),
+    POTATO(4),
+    PUMKIN(5);
+    
 
     private int index;
 
