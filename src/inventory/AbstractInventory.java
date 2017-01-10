@@ -8,14 +8,18 @@ import beans.AbstractObject;
  */
 public interface AbstractInventory {
 
-    public abstract String getInventoryObjects();
+    public String getInventoryObjects();
+    
+    public Inventory getInventory();
 
-    public abstract void addObject(AbstractObject object);
+    public void addObject(AbstractObject object);
 
-    public abstract int getFreeVolume();
+    public int getFreeVolume();
 
-    public abstract int getFreeWeight();
+    public int getFreeWeight();
 
-    public abstract String getInventoryStatus();
+    public String getInventoryStatus();
+    
+    public AbstractObject getElement(int id);
 
 }

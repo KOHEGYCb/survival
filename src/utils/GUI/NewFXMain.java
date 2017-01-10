@@ -24,7 +24,7 @@ import javafx.stage.Stage;
  */
 public class NewFXMain extends Application {
 
-    AbstractInventory inventory = new Inventory(500, 1000);
+    AbstractInventory inventory = new Inventory(500, 100);
     Label volume = new Label();
     Label weight = new Label();
 
@@ -113,6 +113,8 @@ public class NewFXMain extends Application {
         VBox vBox = new VBox(5);
         vBox.setLayoutX(200);
         vBox.getChildren().addAll(cabbage, carrot, potato, pumkin, tomato);
+        
+//        inventory.getElement(3);
         
         Pane root = new Pane();
 //        StackPane root = new StackPane();

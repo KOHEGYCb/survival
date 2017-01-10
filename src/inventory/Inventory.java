@@ -77,7 +77,7 @@ public class Inventory implements AbstractInventory {
         for (int i = 0; i < objects.size(); i++) {
             usedWeight = usedWeight + objects.get(i).getWeight();
         }
-        return this.volume - usedWeight;
+        return this.weight - usedWeight;
     }
 
     @Override
@@ -110,6 +110,16 @@ public class Inventory implements AbstractInventory {
      */
     public void setObjects(List<AbstractObject> objects) {
         this.objects = objects;
+    }
+
+    @Override
+    public AbstractObject getElement(int id) {
+        return objects.get(id);
+    }
+
+    @Override
+    public Inventory getInventory() {
+        return this;
     }
 
 }
