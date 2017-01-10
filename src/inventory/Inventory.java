@@ -117,4 +117,9 @@ public class Inventory implements AbstractInventory {
         return objects.get(id);
     }
 
+    @Override
+    public Inventory getInventory() {
+        return this;
+    }
+
 }

@@ -9,6 +9,8 @@ import beans.AbstractObject;
 public interface AbstractInventory {
 
     public String getInventoryObjects();
+    
+    public Inventory getInventory();
 
     public void addObject(AbstractObject object);
 
