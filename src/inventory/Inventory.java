@@ -112,4 +112,9 @@ public class Inventory implements AbstractInventory {
         this.objects = objects;
     }
 
+    @Override
+    public AbstractObject getElement(int id) {
+        return objects.get(id);
+    }
+
 }
