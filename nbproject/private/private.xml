@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/beans/AbstractObject.java</file>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/inventory/AbstractInventory.java</file>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/utils/GUI/NewFXMain.java</file>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/beans/food/Food.java</file>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/beans/bag/Bag.java</file>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/constants/BagSize.java</file>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/beans/bag/Backpack.java</file>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/beans/bag/AbstractBag.java</file>
-            <file>file:/D:/Облако/YandexDisk/Java/survival/src/inventory/Inventory.java</file>
+            <file>file:/D:/survival/src/inventory/AbstractInventory.java</file>
+            <file>file:/D:/survival/src/beans/bag/Backpack.java</file>
+            <file>file:/D:/survival/src/beans/bag/Bag.java</file>
+            <file>file:/D:/survival/src/utils/GUI/NewFXMain.java</file>
+            <file>file:/D:/survival/src/beans/food/Food.java</file>
+            <file>file:/D:/survival/src/beans/bag/AbstractBag.java</file>
+            <file>file:/D:/survival/src/inventory/Inventory.java</file>
+            <file>file:/D:/survival/src/beans/AbstractObject.java</file>
         </group>
     </open-files>
 </project-private>
