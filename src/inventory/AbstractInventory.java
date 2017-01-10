@@ -1,18 +1,25 @@
 package inventory;
 
+import beans.AbstractObject;
+
 /**
  *
  * @author Dmitry
  */
-public abstract class AbstractInventory {
+public interface AbstractInventory {
 
-    public AbstractInventory() {
-    }
-
-    public abstract int getFreeVolume();
-
-    public abstract int getFreeWeight();
-
-    public abstract String getInventoryStatus();
+    public String getInventoryObjects();
     
+    public Inventory getInventory();
+
+    public void addObject(AbstractObject object);
+
+    public int getFreeVolume();
+
+    public int getFreeWeight();
+
+    public String getInventoryStatus();
+    
+    public AbstractObject getElement(int id);
+
 }

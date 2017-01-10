@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author Dmitry
  */
-public class Inventory extends AbstractInventory {
+public class Inventory implements AbstractInventory {
 
     private int weight;
     private int volume;
@@ -25,11 +25,13 @@ public class Inventory extends AbstractInventory {
         this.volume = volume;
     }
 
+    @Override
     public void addObject(AbstractObject object) {
         if (getFreeVolume() >= object.getVolume() & getFreeWeight() >= object.getWeight()) {
             this.objects.add(object);
-        }else
+        } else {
             System.out.println("Not enough Volume or Weight");
+        }
     }
 
     /**
@@ -75,7 +77,7 @@ public class Inventory extends AbstractInventory {
         for (int i = 0; i < objects.size(); i++) {
             usedWeight = usedWeight + objects.get(i).getWeight();
         }
-        return this.volume - usedWeight;
+        return this.weight - usedWeight;
     }
 
     @Override
@@ -83,18 +85,19 @@ public class Inventory extends AbstractInventory {
         return "FreeVolume: " + getFreeVolume()
                 + "\nFreeWeigth: " + getFreeWeight();
     }
-    
+
+    @Override
     public String getInventoryObjects() {
         String str = "Inventory {\n";
-        
-        for(int i = 0; i < objects.size(); i++){
-            str = str + "  " + (i+1) + ") " + objects.get(i).getName() + "\n";
+
+        for (int i = 0; i < objects.size(); i++) {
+            str = str + "  " + (i + 1) + ") " + objects.get(i).getName() + "\n";
         }
         str = str + "}";
         return str;
-        
+
     }
-    
+
     /**
      * @return the objects
      */
@@ -107,6 +110,16 @@ public class Inventory extends AbstractInventory {
      */
     public void setObjects(List<AbstractObject> objects) {
         this.objects = objects;
+    }
+
+    @Override
+    public AbstractObject getElement(int id) {
+        return objects.get(id);
+    }
+
+    @Override
+    public Inventory getInventory() {
+        return this;
     }
 
 }

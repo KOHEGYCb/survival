@@ -9,16 +9,16 @@ import java.util.Random;
  *
  * @author Dmitry
  */
-public class Tomato extends Food {
-
-    private static int volume = new Random().nextInt(10) + 10;
+public class Carrot extends Food {
+    
+    private static int volume = new Random().nextInt(5) + 15;
     private static int weigth = new Random().nextInt(100) + 100;
     
-    public Tomato() {
+    public Carrot() {
         super(volume, weigth);
-        setType(ObjectType.TOMATO);
-        setName(VegetablesNames.TOMATO);
-        setDescription("beautiful ripe red vegetable");
+        setType(ObjectType.CARROT);
+        setName(VegetablesNames.CARROT);
+        setDescription("solid long orange vegetable");
     }
 
 }
