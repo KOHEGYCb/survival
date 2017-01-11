@@ -1,4 +1,4 @@
-package beans.bag;
+package entitys.bag;
 
 /**
  *

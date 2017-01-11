@@ -1,6 +1,6 @@
-package beans.bag;
+package entitys.bag;
 
-import beans.AbstractObject;
+import entitys.Thing;
 import constants.BagSize;
 import inventory.AbstractInventory;
 
@@ -8,13 +8,13 @@ import inventory.AbstractInventory;
  *
  * @author Dmitry
  */
-public abstract class AbstractBag extends AbstractObject implements Bag {
+public abstract class AbstractBag extends Thing implements Bag {
 
     private AbstractInventory inventory;
     private BagSize size;
     
     public AbstractBag(int volume, int weigth) {
-        super(volume, weigth);
+        super(volume, weigth, "", "");
     }
 
     /**

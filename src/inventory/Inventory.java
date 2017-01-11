@@ -1,6 +1,6 @@
 package inventory;
 
-import beans.AbstractObject;
+import entitys.Thing;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,20 +13,20 @@ public class Inventory implements AbstractInventory {
     private int weight;
     private int volume;
 
-    private List<AbstractObject> objects;
+    private List<Thing> objects;
 
     public Inventory() {
-        this.objects = new ArrayList<AbstractObject>();
+        this.objects = new ArrayList<Thing>();
     }
 
     public Inventory(int weight, int volume) {
-        this.objects = new ArrayList<AbstractObject>();
+        this.objects = new ArrayList<Thing>();
         this.weight = weight;
         this.volume = volume;
     }
 
     @Override
-    public void addObject(AbstractObject object) {
+    public void addObject(Thing object) {
         if (getFreeVolume() >= object.getVolume() & getFreeWeight() >= object.getWeight()) {
             this.objects.add(object);
         } else {
@@ -101,19 +101,19 @@ public class Inventory implements AbstractInventory {
     /**
      * @return the objects
      */
-    public List<AbstractObject> getObjects() {
+    public List<Thing> getObjects() {
         return objects;
     }
 
     /**
      * @param objects the objects to set
      */
-    public void setObjects(List<AbstractObject> objects) {
+    public void setObjects(List<Thing> objects) {
         this.objects = objects;
     }
 
     @Override
-    public AbstractObject getElement(int id) {
+    public Thing getElement(int id) {
         return objects.get(id);
     }
 
