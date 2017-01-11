@@ -1,6 +1,6 @@
 package inventory;
 
-import beans.AbstractObject;
+import entitys.Thing;
 
 /**
  *
@@ -12,7 +12,7 @@ public interface AbstractInventory {
     
     public Inventory getInventory();
 
-    public void addObject(AbstractObject object);
+    public void addObject(Thing object);
 
     public int getFreeVolume();
 
@@ -20,6 +20,6 @@ public interface AbstractInventory {
 
     public String getInventoryStatus();
     
-    public AbstractObject getElement(int id);
+    public Thing getElement(int id);
 
 }
