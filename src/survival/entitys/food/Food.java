@@ -1,5 +1,6 @@
 package  survival.entitys.food;
 
+import survival.constants.VegetablesEnum;
 import survival.entitys.Thing;
 
 /**
@@ -21,6 +22,11 @@ public abstract class Food extends Thing {
     public Food(int kkal, int weight, int volume, String name, String description) {
         super(weight, volume, name, description);
         this.kkal = kkal;
+    }
+    
+    public Food(VegetablesEnum vegetable, int weight, int volume){
+        super(weight, volume, vegetable.getName(), vegetable.getDescription());
+        this.kkal = vegetable.getKkal();
     }
 
     /**

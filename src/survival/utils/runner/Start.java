@@ -15,7 +15,7 @@ public class Start {
         
         System.out.println(f.getName() + "\n" + f.getDescription());
         
-//        Menu.getINSTANCE();
+        Menu.getINSTANCE();
         
     }
 }
